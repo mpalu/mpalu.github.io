@@ -1,5 +1,5 @@
 window.SITE_CONFIG = {
-  workerEndpoint: "https://mpalu-contact.matheus-palu.workers.dev",
+  workerEndpoint: "https://contact.mpalu.io",
   turnstileSiteKey: "0x4AAAAAADGhfRsuS4_23C8_"
 };
 
