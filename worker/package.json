@@ -1,0 +1,13 @@
+{
+  "name": "mpalu-contact-worker",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cloudflare Worker that receives contact form submissions and sends them via Resend.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "wrangler": "^3.90.0"
+  }
+}

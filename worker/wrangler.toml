@@ -1,0 +1,13 @@
+name = "mpalu-contact"
+main = "src/worker.js"
+compatibility_date = "2025-01-15"
+
+# Non-secret variables. Secrets (RESEND_API_KEY, TURNSTILE_SECRET) are set via `wrangler secret put`.
+[vars]
+MAIL_FROM = "hello@mpalu.io"
+MAIL_TO = "me@mpalu.io"
+
+# Uncomment and adjust after creating the custom route in Cloudflare:
+# [[routes]]
+# pattern = "contact.mpalu.io/*"
+# custom_domain = true

@@ -1,0 +1,18 @@
+# Editor / OS
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+# Node / Wrangler
+node_modules/
+worker/node_modules/
+worker/.wrangler/
+worker/.dev.vars
+.dev.vars
+
+# Local development
+.env
+.env.*
+*.pem
+*.key

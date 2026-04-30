@@ -3,466 +3,384 @@
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark light">
+  <meta name="theme-color" content="#07070a">
 
-  <!-- Primary Meta Tags -->
-  <title data-i18n="meta_title">Matheus Palu - Platform Engineering & DevOps Solutions</title>
-  <meta name="title" content="Matheus Palu - Platform Engineering & DevOps Solutions">
-  <meta name="description" data-i18n="meta_description"
-    content="Platform Engineering & DevOps Solutions. Specializing in cloud infrastructure, Kubernetes, and building high-performing engineering teams.">
-  <meta name="keywords" data-i18n="meta_keywords"
-    content="Platform Engineering, DevOps, Cloud Infrastructure, Kubernetes, Technical Leadership, Engineering Management, GitOps, Cloud Native">
+  <title data-i18n="meta_title">Matheus Palu — Platform Engineer</title>
+  <meta name="description" data-i18n-meta="meta_description"
+    content="Platform Engineer based in Gothenburg. Cloud infrastructure, Kubernetes, CI/CD, and developer platforms.">
+  <meta name="keywords" data-i18n-meta="meta_keywords"
+    content="Platform Engineering, DevOps, Kubernetes, Cloud Infrastructure, GitOps, SRE">
   <meta name="author" content="Matheus Palu">
   <meta name="robots" content="index, follow">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
 
-  <!-- Open Graph / Facebook -->
+  <meta http-equiv="Content-Security-Policy"
+    content="default-src 'self'; base-uri 'self'; form-action 'self'; img-src 'self' data:; style-src 'self'; font-src 'self'; script-src 'self' 'sha256-rLRjeHfkBcy7A09MfZfmvfB7Qm48xVE7NNm67UdrADc=' 'sha256-5R09AHO6AR+sT1J6TlmWGTwc/mWMCPFB/dNbTAhLYx8=' https://challenges.cloudflare.com; frame-src https://challenges.cloudflare.com; connect-src 'self' https://challenges.cloudflare.com https://*.workers.dev https://contact.mpalu.io; object-src 'none'; frame-ancestors 'none'; upgrade-insecure-requests">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mpalu.io/">
-  <meta property="og:title" content="Matheus Palu - Platform Engineering & DevOps Solutions">
-  <meta property="og:description"
-    content="Platform Engineering & DevOps Solutions. Specializing in cloud infrastructure, Kubernetes, and building high-performing engineering teams.">
-  <meta property="og:image" content="https://mpalu.io/img/avatar.png">
+  <meta property="og:title" data-i18n-meta="meta_title" content="Matheus Palu — Platform Engineer">
+  <meta property="og:description" data-i18n-meta="meta_description"
+    content="Platform Engineer based in Gothenburg. Cloud infrastructure, Kubernetes, CI/CD, and developer platforms.">
+  <meta property="og:site_name" content="Matheus Palu">
 
-  <!-- Twitter -->
-  <meta property="twitter:card" content="summary_large_image">
-  <meta property="twitter:url" content="https://mpalu.io/">
-  <meta property="twitter:title" content="Matheus Palu - Platform Engineering & DevOps Solutions">
-  <meta property="twitter:description"
-    content="Platform Engineering & DevOps Solutions. Specializing in cloud infrastructure, Kubernetes, and building high-performing engineering teams.">
-  <meta property="twitter:image" content="https://mpalu.io/img/avatar.png">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" data-i18n-meta="meta_title" content="Matheus Palu — Platform Engineer">
+  <meta name="twitter:description" data-i18n-meta="meta_description"
+    content="Platform Engineer based in Gothenburg. Cloud infrastructure, Kubernetes, CI/CD, and developer platforms.">
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="img/favicon.png" alt="Favicon">
-
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://mpalu.io/">
+  <link rel="icon" type="image/svg+xml" href="img/favicon.svg">
+  <link rel="icon" type="image/png" sizes="32x32" href="img/favicon.png">
 
-  <!-- Styles -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.5.0/css/flag-icon.min.css">
+  <link rel="preload" href="fonts/Inter-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/JetBrainsMono-Variable.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
 
-  <!-- Schema.org markup for Google -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("mpalu.theme");
+        if (t !== "light" && t !== "dark") t = "dark";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {
+        document.documentElement.setAttribute("data-theme", "dark");
+      }
+    })();
+  </script>
+
   <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Person",
-      "name": "Matheus Palu",
-      "url": "https://mpalu.io/",
-      "image": "https://mpalu.io/img/avatar.png",
-      "sameAs": [
-        "https://github.com/mpalu",
-        "https://www.linkedin.com/in/matheuspalu/"
-      ],
-      "jobTitle": "Platform Engineer",
-      "worksFor": {
-        "@type": "Organization",
-        "name": "Platform Engineering & DevOps Solutions"
-      },
-      "description": "Platform Engineering & DevOps Solutions. Specializing in cloud infrastructure, Kubernetes, and building high-performing engineering teams."
-    }
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Matheus Palu",
+    "url": "https://mpalu.io/",
+    "jobTitle": "Platform Engineer",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Gothenburg",
+      "addressCountry": "SE"
+    },
+    "sameAs": [
+      "https://github.com/mpalu",
+      "https://www.linkedin.com/in/matheuspalu/"
+    ]
+  }
   </script>
 </head>
 
-<body class="bg-gray-50">
-  <!-- Language Selector -->
-  <div class="fixed top-4 right-4 z-50 flex space-x-2">
-    <button onclick="changeLanguage('en')" class="px-2 py-1 rounded bg-white/20 hover:bg-white/30 transition">
-      <span class="flag-icon flag-icon-gb w-6 h-4"></span>
-    </button>
-    <button onclick="changeLanguage('pt-BR')" class="px-2 py-1 rounded bg-white/20 hover:bg-white/30 transition">
-      <span class="flag-icon flag-icon-br w-6 h-4"></span>
-    </button>
-    <button onclick="changeLanguage('sv')" class="px-2 py-1 rounded bg-white/20 hover:bg-white/30 transition">
-      <span class="flag-icon flag-icon-se w-6 h-4"></span>
-    </button>
-  </div>
+<body>
+  <a class="skip-link" href="#main" data-i18n="nav_about">Skip to content</a>
 
-  <!-- Hero Section -->
-  <header class="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
-    <div class="container mx-auto px-6 py-16">
-      <div class="flex flex-col md:flex-row items-center justify-between">
-        <div class="md:w-1/2 mb-8 md:mb-0">
-          <h1 class="text-4xl font-bold mb-4">Matheus Palu</h1>
-          <h2 class="text-2xl mb-4" data-i18n="hero_title">Platform Engineering & DevOps Solutions</h2>
-          <div class="text-xl mb-8" data-i18n="hero_subtitle">
-            <p>Transforming infrastructure and engineering teams for the cloud-native era</p>
-          </div>
-          <p class="text-lg mb-8 flex items-center">
-            <i class="fas fa-map-marker-alt mr-2"></i>
-            <span data-i18n="hero_location">Gothenburg, Sweden</span>
-          </p>
-          <div class="flex space-x-4">
-            <!-- <a href="https://github.com/mpalu" target="_blank"
-              class="bg-white text-blue-800 px-6 py-2 rounded-full hover:bg-gray-100 transition">
-              <i class="fab fa-github mr-2"></i>GitHub
-            </a> -->
-            <a href="https://www.linkedin.com/in/matheuspalu/" target="_blank"
-              class="bg-white text-blue-800 px-6 py-2 rounded-full hover:bg-gray-100 transition">
-              <i class="fab fa-linkedin mr-2"></i>Get in Touch
-            </a>
-          </div>
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="#top" aria-label="Matheus Palu">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>mpalu.io</span>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#stack" data-i18n="nav_stack">Stack</a>
+        <a href="#experience" data-i18n="nav_experience">Experience</a>
+        <a href="#contact" data-i18n="nav_contact">Contact</a>
+      </nav>
+      <div class="header-controls">
+        <div class="lang-switch" role="group" aria-label="Language">
+          <button type="button" data-lang="en" aria-pressed="true">EN</button>
+          <button type="button" data-lang="pt-BR" aria-pressed="false">PT</button>
+          <button type="button" data-lang="sv" aria-pressed="false">SV</button>
         </div>
-        <div class="md:w-1/2">
-          <img src="img/avatar.png" alt="Profile"
-            class="rounded-full w-48 h-48 mx-auto border-4 border-white shadow-lg"
-            style="filter: sepia(100%) hue-rotate(190deg) saturate(300%);">
-        </div>
+        <button type="button" class="theme-toggle" aria-label="Toggle theme" aria-pressed="false">
+          <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg>
+        </button>
       </div>
     </div>
   </header>
 
-  <!-- Trusted Companies Section -->
-  <!-- <section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-12 text-center" data-i18n="trusted_companies">Trusted By</h2>
-      <div class="flex overflow-hidden space-x-16 group">
-        <div class="flex space-x-16 animate-scroll group-hover:pause">
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Volvo Cars</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Sebratec</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Insoner</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Brasil Paralelo</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Fabled</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Trimble</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Inside Sistemas</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">ITVALE</span> -->
-          <!-- Duplicated for seamless scrolling -->
-          <!-- <span class="text-2xl font-bold text-gray-800 min-w-max">Volvo Cars</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Sebratec</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Insoner</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Brasil Paralelo</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Fabled</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Trimble</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">Inside Sistemas</span>
-          <span class="text-2xl font-bold text-gray-800 min-w-max">ITVALE</span>
-        </div>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="hero-name">
+      <div class="container">
+        <p class="hero-kicker">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span data-i18n="hero_role">Platform Engineer</span>
+          <span aria-hidden="true">·</span>
+          <span data-i18n="hero_location">Gothenburg, Sweden</span>
+        </p>
+        <h1 class="hero-name" id="hero-name">Matheus Palu</h1>
+        <p class="hero-summary" data-i18n="hero_summary" data-i18n-html="true">
+          I design and operate the infrastructure engineers <em>build on</em> — cloud platforms, Kubernetes, delivery pipelines, and the tooling that keeps them reliable.
+        </p>
+        <p class="hero-proof mono" data-i18n="hero_proof">Previously at Volvo Cars, Trimble, Insoner.</p>
       </div>
-    </div>
-  </section> -->
+    </section>
 
-  <!-- <style>
-    @keyframes scroll {
-      0% {
-        transform: translateX(0);
-      }
-
-      100% {
-        transform: translateX(calc(-16rem * 8 - 4rem * 8));
-      }
-    }
-
-    .animate-scroll {
-      animation: scroll 30s linear infinite;
-    }
-
-    .group:hover .animate-scroll {
-      animation-play-state: paused;
-    }
-  </style> -->
-
-  <!-- Services Section -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-12 text-center" data-i18n="services_title">Services</h2>
-      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
-        <div class="p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition">
-          <div class="text-blue-600 mb-4">
-            <i class="fas fa-cloud text-4xl"></i>
+    <section id="about" aria-labelledby="about-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">01 · <span data-i18n="nav_about">About</span></span>
+        </div>
+        <div class="about-grid">
+          <h2 id="about-title" class="about-lede" data-i18n="about_lede" data-i18n-html="true">
+            Platforms that reduce friction for product teams — <em>without hiding</em> what's underneath.
+          </h2>
+          <div class="about-body">
+            <p data-i18n="about_p1">I work on the infrastructure product teams build on — Kubernetes clusters, cloud platforms, delivery pipelines, and the tooling around them. My background spans DevOps, Platform Engineering, and a stretch as an Engineering Manager, with experience at both product companies and consultancies.</p>
+            <p data-i18n="about_p2">Comfortable going deep on cluster internals, cost and capacity, or pairing with product engineers on delivery workflows. I prefer small, durable solutions over sprawling ones.</p>
           </div>
-          <h3 class="text-xl font-semibold mb-4" data-i18n="cloud_infra_title">Cloud Infrastructure</h3>
-          <p class="text-gray-600" data-i18n="cloud_infra_desc">Design and implementation of scalable cloud infrastructure across AWS, GCP, Azure, and VPS.
-            Specializing in Kubernetes deployments and infrastructure as code with Terraform.</p>
         </div>
-  
-        <div class="p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition">
-          <div class="text-blue-600 mb-4">
-            <i class="fas fa-code-branch text-4xl"></i>
+      </div>
+    </section>
+
+    <section id="work" aria-labelledby="work-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">02 · <span data-i18n="nav_work">Work</span></span>
+        </div>
+        <h2 id="work-title" data-i18n="work_title">What I work on</h2>
+        <div class="grid">
+          <article class="card">
+            <span class="card-number">/01</span>
+            <h3 data-i18n="work_infra_title">Cloud Infrastructure</h3>
+            <p data-i18n="work_infra_desc">AWS, GCP, Azure, and bare-metal/VPS. Terraform-driven, with an eye on cost and blast radius.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">/02</span>
+            <h3 data-i18n="work_k8s_title">Kubernetes &amp; Runtime</h3>
+            <p data-i18n="work_k8s_desc">Cluster design, upgrades, workload onboarding, security baselines, and day-two operations.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">/03</span>
+            <h3 data-i18n="work_delivery_title">Delivery &amp; GitOps</h3>
+            <p data-i18n="work_delivery_desc">CI/CD with GitHub Actions, GitLab CI, Jenkins. GitOps with Argo CD and Flux.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">/04</span>
+            <h3 data-i18n="work_platform_title">Internal Platforms</h3>
+            <p data-i18n="work_platform_desc">Self-service paths for product teams, paved roads, and developer-facing APIs and CLIs.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">/05</span>
+            <h3 data-i18n="work_obs_title">Observability</h3>
+            <p data-i18n="work_obs_desc">Prometheus, Grafana, and OpenTelemetry. Metrics and traces that actually get used on-call.</p>
+          </article>
+          <article class="card">
+            <span class="card-number">/06</span>
+            <h3 data-i18n="work_lead_title">Technical Leadership</h3>
+            <p data-i18n="work_lead_desc">Team lead and engineering manager experience. Hiring, mentoring, and setting technical direction.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="stack" aria-labelledby="stack-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">03 · <span data-i18n="nav_stack">Stack</span></span>
+        </div>
+        <h2 id="stack-title" data-i18n="stack_title">Stack</h2>
+        <p class="stack-intro" data-i18n="stack_subtitle">Tools and technologies I work with regularly.</p>
+        <div class="stack-groups">
+          <div class="stack-group">
+            <h3 data-i18n="stack_group_orch">Kubernetes</h3>
+            <ul class="tag-list">
+              <li class="tag">Kubernetes</li>
+              <li class="tag">Helm</li>
+              <li class="tag">Argo CD</li>
+              <li class="tag">Flux</li>
+              <li class="tag">Talos Linux</li>
+            </ul>
           </div>
-          <h3 class="text-xl font-semibold mb-4" data-i18n="devops_title">DevOps Implementation</h3>
-          <p class="text-gray-600" data-i18n="devops_desc">End-to-end CI/CD pipeline development, GitOps practices implementation, and automation
-            solutions. Focus on developer experience and efficient delivery workflows.</p>
-        </div>
-  
-        <div class="p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition">
-          <div class="text-blue-600 mb-4">
-            <i class="fas fa-chart-line text-4xl"></i>
+          <div class="stack-group">
+            <h3 data-i18n="stack_group_cloud">Cloud &amp; Infrastructure</h3>
+            <ul class="tag-list">
+              <li class="tag">AWS</li>
+              <li class="tag">GCP</li>
+              <li class="tag">Azure</li>
+              <li class="tag">Hetzner</li>
+              <li class="tag">Cloudflare</li>
+              <li class="tag">Terraform</li>
+            </ul>
           </div>
-          <h3 class="text-xl font-semibold mb-4" data-i18n="platform_title">Platform Engineering</h3>
-          <p class="text-gray-600" data-i18n="platform_desc">Building internal developer platforms with focus on self-service capabilities, 
-            observability, and cloud-native architectures.</p>
-        </div>
-  
-        <div class="p-6 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition">
-          <div class="text-blue-600 mb-4">
-            <i class="fas fa-users-gear text-4xl"></i>
+          <div class="stack-group">
+            <h3 data-i18n="stack_group_delivery">Delivery</h3>
+            <ul class="tag-list">
+              <li class="tag">GitHub Actions</li>
+              <li class="tag">GitLab CI</li>
+              <li class="tag">Jenkins</li>
+              <li class="tag">GitOps</li>
+              <li class="tag">Docker</li>
+            </ul>
           </div>
-          <h3 class="text-xl font-semibold mb-4" data-i18n="management_title">Engineering Management</h3>
-          <p class="text-gray-600" data-i18n="management_desc">Technical leadership, team management, and DevOps culture implementation. Specializing
-            in building and leading high-performing engineering teams.</p>
+          <div class="stack-group">
+            <h3 data-i18n="stack_group_obs">Observability</h3>
+            <ul class="tag-list">
+              <li class="tag">Prometheus</li>
+              <li class="tag">Grafana</li>
+              <li class="tag">OpenTelemetry</li>
+              <li class="tag">Datadog</li>
+            </ul>
+          </div>
+          <div class="stack-group">
+            <h3 data-i18n="stack_group_lang">Scripting</h3>
+            <ul class="tag-list">
+              <li class="tag">Bash</li>
+              <li class="tag">Python</li>
+              <li class="tag">Linux</li>
+            </ul>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Core Skills Section -->
-  <section class="py-16 bg-gray-900">
-    <div class="container mx-auto px-6">
-      <h2 class="text-3xl font-bold mb-8 text-center text-white" data-i18n="tech_title">Technologies & Expertise</h2>
-      <p class="text-xl text-gray-300 text-center mb-12" data-i18n="tech_subtitle">Comprehensive solutions across the modern tech stack, specializing in cloud-native technologies and DevOps practices.</p>
-      <div class="flex flex-wrap justify-center gap-4">
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Kubernetes</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Helm</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">AWS</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">GCP</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Azure</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">VPS</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Baremetal</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Terraform</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Infrastructure as Code</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Docker</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Containerization</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Container Security</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">CI/CD</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Jenkins</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">GitHub Actions</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">GitLab CI</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">GitOps</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Flux</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">ArgoCD</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Observability</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Grafana</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">OpenTelemetry</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Prometheus</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Linux</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Scripting</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Automation</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Platform Architecture</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Developer Experience</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Team Management</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Technical Leadership</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">DevOps Culture</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Cross-team Collaboration</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Platform Engineering</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Internal Developer Platforms</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">Cloud Native Architecture</span>
-        <span class="px-6 py-3 bg-gray-800 text-white rounded-lg hover:bg-gray-700 transition">FinOps Practices</span>
+    <section id="experience" aria-labelledby="experience-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">04 · <span data-i18n="nav_experience">Experience</span></span>
+        </div>
+        <h2 id="experience-title" data-i18n="experience_title">Experience</h2>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2025-05">May 2025</time> — <span data-i18n="experience_current">Present</span></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_dhc">Platform Engineer</div>
+              <div class="timeline-company" data-i18n="experience_company_dhc">Definitive Healthcare</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2024-08">Aug 2024</time> — <time datetime="2025-04">Apr 2025</time></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_fabled">Platform Engineer</div>
+              <div class="timeline-company" data-i18n="experience_company_fabled">Fabled</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2023-10">Oct 2023</time> — <time datetime="2024-12">Dec 2024</time></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_insoner_em">Engineering Manager</div>
+              <div class="timeline-company" data-i18n="experience_company_insoner">Insoner</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2022-08">Aug 2022</time> — <time datetime="2023-10">Oct 2023</time></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_insoner_pe">Platform Engineer</div>
+              <div class="timeline-company" data-i18n="experience_company_insoner">Insoner</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2022-08">Aug 2022</time> — <time datetime="2024-08">Aug 2024</time></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_volvo">Platform Engineer</div>
+              <div class="timeline-company" data-i18n="experience_company_volvo">Volvo Cars</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2021-11">Nov 2021</time> — <time datetime="2022-08">Aug 2022</time></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_bp">DevOps Engineer</div>
+              <div class="timeline-company" data-i18n="experience_company_bp">Brasil Paralelo</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2020-10">Oct 2020</time> — <time datetime="2021-11">Nov 2021</time></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_trimble">DevOps Engineer</div>
+              <div class="timeline-company" data-i18n="experience_company_trimble">Trimble Inc.</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2018-05">May 2018</time> — <time datetime="2020-09">Sep 2020</time></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_inside">Systems Administrator</div>
+              <div class="timeline-company" data-i18n="experience_company_inside">Inside Sistemas</div>
+            </div>
+          </li>
+          <li class="timeline-item">
+            <div class="timeline-period"><time datetime="2015-07">Jul 2015</time> — <time datetime="2017-09">Sep 2017</time></div>
+            <div>
+              <div class="timeline-role" data-i18n="experience_role_itvale">Infrastructure Analyst</div>
+              <div class="timeline-company" data-i18n="experience_company_itvale">ITVALE</div>
+            </div>
+          </li>
+        </ol>
+        <p class="timeline-footnote" data-i18n="experience_earlier">Earlier roles in tech support and instruction since 2007.</p>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Contact Section -->
-  <section class="py-16 bg-white">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8" data-i18n="contact_title">Let's Build Something Great</h2>
-      <p class="text-xl text-gray-600 mb-8" data-i18n="contact_desc">Interested in improving your platform infrastructure or implementing DevOps practices?</p>
-      <a href="https://www.linkedin.com/in/matheuspalu/" target="_blank" alt="LinkedIn"
-        class="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition inline-flex items-center">
-        <i class="fab fa-linkedin mr-2"></i>
-        <span data-i18n="contact_btn">Get in Touch</span>
-      </a>
-    </div>
-  </section>
+    <section id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <div class="section-head">
+          <span class="mono">05 · <span data-i18n="nav_contact">Contact</span></span>
+        </div>
+        <div class="contact-wrap">
+          <div>
+            <h2 id="contact-title" class="contact-headline" data-i18n="contact_headline" data-i18n-html="true">
+              Let's <em>talk</em> about your platform.
+            </h2>
+            <p class="contact-blurb" data-i18n="contact_desc">For work inquiries or a direct conversation, use the form. Messages are delivered to my inbox.</p>
+            <div class="contact-elsewhere">
+              <a href="https://www.linkedin.com/in/matheuspalu/" target="_blank" rel="noopener noreferrer">LinkedIn →</a>
+              <a href="https://github.com/mpalu" target="_blank" rel="noopener noreferrer">GitHub →</a>
+            </div>
+          </div>
+          <div class="contact-card">
+            <form id="contact-form" novalidate autocomplete="on">
+              <div class="form-field">
+                <label for="name" data-i18n="contact_name">Name</label>
+                <input id="name" name="name" type="text" maxlength="100" required autocomplete="name" aria-describedby="name-error">
+                <span id="name-error" class="error-msg" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="email" data-i18n="contact_email">Email</label>
+                <input id="email" name="email" type="email" maxlength="200" required autocomplete="email" inputmode="email" aria-describedby="email-error">
+                <span id="email-error" class="error-msg" role="alert"></span>
+              </div>
+              <div class="form-field">
+                <label for="message" data-i18n="contact_message">Message</label>
+                <textarea id="message" name="message" rows="6" maxlength="2000" required aria-describedby="message-error"></textarea>
+                <span id="message-error" class="error-msg" role="alert"></span>
+              </div>
 
-  <!-- Current Engagement Section -->
-  <section class="py-16 pt-0 bg-white">
-    <div class="container mx-auto px-6 text-center">
-      <h2 class="text-3xl font-bold mb-8" data-i18n="current_engagement">Present Endeavor</h2>
-      <p class="text-xl text-gray-600 mb-8" data-i18n="current_engagement_desc">Currently collaborting with Fabled, a Swedish software consultancy company, as a Platform Engineer</p>
-      <div class="flex justify-center items-center">
-        <a href="https://fabled.se" target="_blank">
-          <img src="img/currently.webp" alt="Fabled" width="200" height="50"
-            class="h-18 opacity-90 transition-all duration-300 hover:opacity-100">
-        </a>
+              <div class="hp-field" aria-hidden="true">
+                <label for="website">Website</label>
+                <input id="website" name="website" type="text" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="turnstile-wrap">
+                <div id="turnstile-container"></div>
+              </div>
+
+              <button type="submit" class="btn">
+                <span class="btn-label" data-i18n="contact_submit">Send message</span>
+              </button>
+              <p class="form-status" role="status" aria-live="polite"></p>
+            </form>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
+    </section>
+  </main>
 
-  <!-- Footer -->
-  <footer class="bg-gray-800 text-white py-8">
-    <div class="container mx-auto px-6 text-center">
-      <div class="flex justify-center space-x-6 mb-4">
-        <a href="https://github.com/mpalu" target="_blank" alt="GitHub" class="hover:text-gray-300">
-          <i class="fab fa-github text-2xl"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/matheuspalu/" target="_blank" alt="LinkedIn" class="hover:text-gray-300">
-          <i class="fab fa-linkedin text-2xl"></i>
-        </a>
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="footer-year"></span> Matheus Palu. <span data-i18n="footer_rights">All rights reserved.</span></p>
+      <div class="footer-links">
+        <a href="https://github.com/mpalu" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/matheuspalu/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       </div>
-      <p data-i18n="copyright">&copy; Matheus Palu. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Internationalization Script -->
-  <script>
-    const translations = {
-      'en': {
-        // Meta tags
-        'meta_title': 'Matheus Palu - Platform Engineering & DevOps Solutions',
-        'meta_description': 'Platform Engineering & DevOps Solutions. Specializing in cloud infrastructure, Kubernetes, and building high-performing engineering teams.',
-        'meta_keywords': 'Platform Engineering, DevOps, Cloud Infrastructure, Kubernetes, Technical Leadership, Engineering Management, GitOps, Cloud Native',
-
-        // Hero Section
-        'hero_title': 'Platform Engineering & DevOps Solutions',
-        'hero_subtitle': 'Transforming infrastructure and engineering teams for the cloud-native era',
-        'hero_location': 'Gothenburg, Sweden',
-
-        // // Trusted Copanies Section
-        // 'trusted_companies': 'Trusted By',
-
-        // Services Section
-        'services_title': 'Services',
-
-        'cloud_infra_title': 'Cloud Infrastructure',
-        'cloud_infra_desc': 'Design and implementation of scalable cloud infrastructure across AWS, GCP, Azure, and VPS. Specializing in Kubernetes deployments and infrastructure as code with Terraform.',
-
-        'devops_title': 'DevOps Implementation',
-        'devops_desc': 'End-to-end CI/CD pipeline development, GitOps practices implementation, and automation solutions. Focus on developer experience and efficient delivery workflows.',
-
-        'platform_title': 'Platform Engineering',
-        'platform_desc': 'Building internal developer platforms with focus on self-service capabilities, observability, and cloud-native architectures.',
-
-        'management_title': 'Engineering Management',
-        'management_desc': 'Technical leadership, team management, and DevOps culture implementation. Specializing in building and leading high-performing engineering teams.',
-
-        // Technologies Section
-        'tech_title': 'Technologies & Expertise',
-        'tech_subtitle': 'Comprehensive solutions across the modern tech stack, specializing in cloud-native technologies and DevOps practices.',
-
-        // Current Engagement Section
-        'current_engagement': 'Present Endeavor',
-        'current_engagement_desc': 'Currently collaborting with Fabled, a Swedish software consultancy company, as a Platform Engineer',
-
-        // Contact Section
-        'contact_title': 'Let\'s Build Something Great',
-        'contact_desc': 'Interested in improving your platform infrastructure or implementing DevOps practices?',
-        'contact_btn': 'Get in Touch',
-
-        // Footer
-        'copyright': '© Matheus Palu. All rights reserved.',
-      },
-      'pt-BR': {
-        // Meta tags
-        'meta_title': 'Matheus Palu - Soluções em Platform Engineering e DevOps',
-        'meta_description': 'Soluções em Platform Engineering e DevOps. Especializado em infraestrutura cloud, Kubernetes e construção de times de alta performance.',
-        'meta_keywords': 'Platform Engineering, DevOps, Infraestrutura Cloud, Kubernetes, Liderança Técnica, Gestão de Engenharia, GitOps, Cloud Native',
-
-        // Hero Section
-        'hero_title': 'Soluções em Platform Engineering e DevOps',
-        'hero_subtitle': 'Transformando infraestrutura e times de engenharia para a era cloud-native',
-        'hero_location': 'Gotemburgo, Suécia',
-
-        // // Trusted Copanies Section
-        // 'trusted_companies': 'Empresas que Confiam',
-
-        // Services Section
-        'services_title': 'Serviços',
-
-        'cloud_infra_title': 'Infraestrutura Cloud',
-        'cloud_infra_desc': 'Design e implementação de infraestrutura escalável em AWS, GCP, Azure e VPS. Especializado em deployments Kubernetes e infraestrutura como código com Terraform.',
-
-        'devops_title': 'Implementação DevOps',
-        'devops_desc': 'Desenvolvimento de pipelines CI/CD, implementação de práticas GitOps e soluções de automação. Foco em experiência do desenvolvedor e fluxos de entrega eficientes.',
-
-        'platform_title': 'Platform Engineering',
-        'platform_desc': 'Construção de plataformas internas para desenvolvedores com foco em self-service, observabilidade e arquiteturas cloud-native.',
-
-        'management_title': 'Gestão de Engenharia',
-        'management_desc': 'Liderança técnica, gestão de times e implementação de cultura DevOps. Especializado em construir e liderar times de alta performance.',
-
-        // Technologies Section
-        'tech_title': 'Tecnologias & Especialidades',
-        'tech_subtitle': 'Soluções abrangentes em toda a stack moderna, com especialização em tecnologias cloud-native e práticas DevOps.',
-
-        // Current Engagement Section
-        'current_engagement': 'Colaboração Atual',
-        'current_engagement_desc': 'Atualmente colaborando com a Fabled, uma empresa de consultoria de software sueca, como Engenheiro de Plataforma',
-
-        // Contact Section
-        'contact_title': 'Vamos Construir Algo Incrível',
-        'contact_desc': 'Interessado em melhorar sua infraestrutura de plataforma ou implementar práticas DevOps?',
-        'contact_btn': 'Entre em Contato',
-
-        // Footer
-        'copyright': '© Matheus Palu. Todos os diretios reservados.',
-      },
-      'sv': {
-        // Meta tags
-        'meta_title': 'Matheus Palu - Platform Engineering & DevOps Lösningar',
-        'meta_description': 'Platform Engineering & DevOps lösningar. Specialiserad på molninfrastruktur, Kubernetes och att bygga högpresterande utvecklingsteam.',
-        'meta_keywords': 'Platform Engineering, DevOps, Molninfrastruktur, Kubernetes, Tekniskt Ledarskap, Engineering Management, GitOps, Cloud Native',
-
-        // Hero Section
-        'hero_title': 'Platform Engineering & DevOps Lösningar',
-        'hero_subtitle': 'Transformerar infrastruktur och utvecklingsteam för cloud-native eran',
-        'hero_location': 'Göteborg, Sverige',
-
-        // // Trusted Copanies Section
-        // 'trusted_companies': 'Anförtrodd av',
-
-        // Services Section
-        'services_title': 'Tjänster',
-
-        'cloud_infra_title': 'Molninfrastruktur',
-        'cloud_infra_desc': 'Design och implementering av skalbar molninfrastruktur över AWS, GCP, Azure och VPS. Specialiserad på Kubernetes-driftsättningar och infrastruktur som kod med Terraform.',
-
-        'devops_title': 'DevOps Implementering',
-        'devops_desc': 'Utveckling av CI/CD-pipelines, implementering av GitOps-metoder och automationslösningar. Fokus på utvecklarupplevelse och effektiva leveransflöden.',
-
-        'platform_title': 'Platform Engineering',
-        'platform_desc': 'Bygger interna utvecklarplattformar med fokus på självbetjäning, observerbarhet och cloud-native arkitekturer.',
-
-        'management_title': 'Engineering Management',
-        'management_desc': 'Tekniskt ledarskap, teamhantering och implementering av DevOps-kultur. Specialiserad på att bygga och leda högpresterande utvecklingsteam.',
-
-        // Technologies Section
-        'tech_title': 'Teknologier & Expertis',
-        'tech_subtitle': 'Omfattande lösningar över den moderna teknikstacken, specialiserad på cloud-native teknologier och DevOps-metoder.',
-
-        // Current Engagement Section
-        'current_engagement': 'Nuvarande Uppdrag',
-        'current_engagement_desc': 'Nuvarande uppdrag med Fabled, en svensk softwarekonsultföretag, som Platform Engineer',
-
-        // Contact Section
-        'contact_title': 'Låt oss Bygga Något Fantastiskt',
-        'contact_desc': 'Intresserad av att förbättra din plattformsinfrastruktur eller implementera DevOps-metoder?',
-        'contact_btn': 'Kontakta Mig',
-
-        // Footer
-        'copyright': '© Matheus Palu. Alla rättigheter förbehållna.',
-      }
-    };
-
-    function changeLanguage(lang) {
-      const elements = document.querySelectorAll('[data-i18n]');
-      elements.forEach(element => {
-        const key = element.getAttribute('data-i18n');
-        if (translations[lang][key]) {
-          if (element.tagName === 'META') {
-            element.setAttribute('content', translations[lang][key]);
-          } else {
-            element.innerText = translations[lang][key];
-          }
-        }
-      });
-
-      // Update OG and Twitter meta tags
-      document.querySelector('meta[property="og:title"]').setAttribute('content', translations[lang]['meta_title']);
-      document.querySelector('meta[property="og:description"]').setAttribute('content', translations[lang]['meta_description']);
-      document.querySelector('meta[property="twitter:title"]').setAttribute('content', translations[lang]['meta_title']);
-      document.querySelector('meta[property="twitter:description"]').setAttribute('content', translations[lang]['meta_description']);
-
-      document.documentElement.lang = lang;
-      localStorage.setItem('preferred_language', lang);
-    }
-
-    function loadSavedLanguage() {
-      const savedLang = localStorage.getItem('preferred_language');
-      if (savedLang && translations[savedLang]) {
-        changeLanguage(savedLang);
-      }
-    }
-
-    document.addEventListener('DOMContentLoaded', loadSavedLanguage);
-  </script>
+  <script src="js/config.js" defer></script>
+  <script src="locales/en.js" defer></script>
+  <script src="locales/pt-BR.js" defer></script>
+  <script src="locales/sv.js" defer></script>
+  <script src="js/main.js" defer></script>
 </body>
+
 </html>
